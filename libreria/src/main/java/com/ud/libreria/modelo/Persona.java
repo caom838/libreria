@@ -71,11 +71,4 @@ public class Persona implements Serializable {
 	@OneToMany(mappedBy="persona")
 	private List<Venta> ventas;
 
-
-	public void finalize() throws Throwable {
-
-	}
-	public Persona(){
-
-	}
 }//end Persona

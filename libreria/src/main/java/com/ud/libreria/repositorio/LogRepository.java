@@ -1,5 +1,9 @@
 package com.ud.libreria.repositorio;
 
-public interface LogRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.ud.libreria.modelo.Log;
+
+public interface LogRepository extends CrudRepository<Log,Long> {
 
 }
