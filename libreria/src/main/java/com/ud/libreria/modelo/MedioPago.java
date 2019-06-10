@@ -29,14 +29,12 @@ public class MedioPago implements Serializable {
 	private List<TarjetaCredito> tarjetacreditos;
 
 
-	public void finalize() throws Throwable {
-
-	}
-	public MedioPago(){
-
-	}
-
+	/**
+	 * Obtiene el nombre compuesto del medio de pago
+	 * @return String
+	 */
 	public String getNombre(){
-		return "";
+		return this.nombre;
 	}
+	
 }//end MedioPago

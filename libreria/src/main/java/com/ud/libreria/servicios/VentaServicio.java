@@ -1,8 +1,12 @@
 package com.ud.libreria.servicios;
 
-import org.springframework.stereotype.Service;
+import com.ud.libreria.modelo.Venta;
 
-@Service
-public class VentaServicio {
+public interface VentaServicio extends OperacionService {
 
+	Venta consultar(Venta venta);
+		
+	Boolean registrarVenta(Venta venta);
+	
+	Boolean editarVenta(Venta venta);
 }

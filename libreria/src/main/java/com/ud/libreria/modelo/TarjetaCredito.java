@@ -24,7 +24,7 @@ import lombok.Data;
 @Data
 @Entity
 @NamedQuery(name="Tarjetacredito.findAll", query="SELECT t FROM Tarjetacredito t")
-public class TarjetaCredito implements Serializable {
+public class TarjetaCredito extends MedioPago implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private @Id @GeneratedValue Long id;
@@ -55,17 +55,6 @@ public class TarjetaCredito implements Serializable {
 		)
 	private List<Persona> personas;
 	
-	
-
-
-
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-	public TarjetaCredito(){
-
-	}
 
 	public boolean esValida(){
 		return false;
@@ -77,5 +66,10 @@ public class TarjetaCredito implements Serializable {
 
 	public String getNumeroTarjeta(){
 		return "";
+	}
+	
+	@Override
+	public String getNombre() {
+		return super.getNombre() + this.getNombre();
 	}
 }//end TarjetaCredito

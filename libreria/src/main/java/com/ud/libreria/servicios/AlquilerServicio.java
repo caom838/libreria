@@ -1,8 +1,14 @@
 package com.ud.libreria.servicios;
 
-import org.springframework.stereotype.Service;
+import com.ud.libreria.modelo.Alquiler;
 
-@Service
-public class AlquilerServicio {
+public interface AlquilerServicio extends OperacionService {
 
+		
+	Alquiler consultar(Alquiler alquiler);
+	
+	Boolean registrarAlquiler(Alquiler alquiler);
+	
+	Boolean editarAlquiler(Alquiler alquiler);
+	
 }

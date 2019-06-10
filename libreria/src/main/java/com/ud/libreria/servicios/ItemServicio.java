@@ -1,8 +1,11 @@
 package com.ud.libreria.servicios;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class ItemServicio {
+import com.ud.libreria.modelo.Item;
 
+public interface ItemServicio {
+
+	List<Item> getAll();
+	
 }

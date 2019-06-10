@@ -1,8 +1,10 @@
 package com.ud.libreria.servicios;
 
-import org.springframework.stereotype.Service;
+import com.ud.libreria.modelo.Persona;
 
-@Service
-public class PersonaServicio {
+public interface PersonaServicio {
 
+	Persona getPersona(Persona persona);
+	Persona getCliente(Persona cliente);
+	Persona getEmpleado(Persona empleado);
 }
