@@ -35,12 +35,4 @@ public class Cliente extends Persona implements Serializable {
 	@JoinColumn(name="id_persona")
 	private Persona persona;
 
-
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-	public Cliente(){
-
-	}
 }//end Cliente

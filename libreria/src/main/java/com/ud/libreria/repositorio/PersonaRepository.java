@@ -7,4 +7,9 @@ import com.ud.libreria.modelo.Persona;
 
 public interface PersonaRepository extends  CrudRepository<Persona, Long> {
 
+	Persona getByPersona(Persona persona);
+	
+	Persona getByTipoIdentificadorAndIdentificador(String tipoIdentificador, String identificador);
+	
+
 }
