@@ -51,7 +51,7 @@ public class Alquiler extends Operacion implements Serializable {
 	@Column(name="fecha_real_entrega")
 	private Date fechaRealEntrega;
 
-	private BigDecimal valor;
+	private Double valor;
 
 	//bi-directional many-to-one association to Mediopago
 	@ManyToOne
@@ -66,15 +66,7 @@ public class Alquiler extends Operacion implements Serializable {
 	//bi-directional many-to-many association to Item
 	@ManyToMany(mappedBy="alquilers")
 	private List<Item> items;
-	
 
-	public Alquiler(){
-
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	public Double calcularTotal(){
 		return 0.0;
 	}

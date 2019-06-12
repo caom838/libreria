@@ -25,15 +25,16 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -51,11 +52,6 @@
 			<scope>test</scope>
 		</dependency>
 
-	<dependency>
-		<groupId>com.google.guava</groupId>
-		<artifactId>guava</artifactId>
-		<version>20.0</version>
-	</dependency>
 
 	<dependency>
 		<groupId>io.springfox</groupId>
@@ -68,10 +64,15 @@
 		<version>2.9.2</version>
 	</dependency>
 	
+	<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+	</dependency>
 		
+
 	</dependencies>
 
-	<dependencyManagement>
+	<!-- <dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.vaadin</groupId>
@@ -81,7 +82,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+	</dependencyManagement> -->
 
 	<build>
 	<plugins>
@@ -95,6 +96,7 @@
 			<version>1.6</version>
 			<configuration>
 				<installDirectory>react</installDirectory>
+				<workingDirectory>react</workingDirectory>
 			</configuration>
 			<executions>
 				<execution>
@@ -107,7 +109,7 @@
 						<npmVersion>6.4.1</npmVersion>
 					</configuration>
 				</execution>
-				<execution>
+				<!-- <execution>
 					<id>npm install</id>
 					<goals>
 						<goal>npm</goal>
@@ -121,7 +123,7 @@
 					<goals>
 						<goal>webpack</goal>
 					</goals>
-				</execution>
+				</execution> -->
 			</executions>
 		</plugin>
 	</plugins>

@@ -10,16 +10,12 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		client({method: 'GET', path: '/api/personas'}).done(response => {
+		client({method: 'GET', path: '/persona/all'}).done(response => {
 			this.setState({personas: response.entity._embedded.personas});
 		});
 	}
 
-	render() {
-		return (
-			<PersonasList employees={this.state.personas}/>
-		)
-	}
+	
 }
 
 class PersonasList extends React.Component{
@@ -41,3 +37,20 @@ class PersonasList extends React.Component{
 		)
 	}
 }
+
+class Persona extends React.Component{
+	render() {
+		return (
+			<tr>
+				<td>{this.props.persona.nombres}</td>
+				<td>{this.props.persona.apellidos}</td>
+				<td>{this.props.persona.identificador}</td>
+			</tr>
+		)
+	}
+}
+
+ReactDOM.render(
+		<App />,
+		document.getElementById('react')
+	)

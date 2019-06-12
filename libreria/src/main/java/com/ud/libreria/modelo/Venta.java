@@ -50,14 +50,7 @@ public class Venta extends Operacion implements Serializable {
 		@JoinColumn(name="id_persona")
 		private Persona persona;
 		
-		
-	public Venta(){
 
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	public Double calcularTotal(){
 		return 0.0;
 	}

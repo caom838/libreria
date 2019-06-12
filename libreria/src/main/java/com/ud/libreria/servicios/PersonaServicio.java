@@ -9,5 +9,5 @@ public interface PersonaServicio {
 	Persona getPersona(Persona persona);
 	Persona getCliente(Persona cliente);
 	Persona getEmpleado(Persona empleado);
-	List<Persona> getAllPersonas();
+	List<Persona> consultarPersonas();
 }

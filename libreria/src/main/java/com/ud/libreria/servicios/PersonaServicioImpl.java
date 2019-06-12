@@ -28,16 +28,21 @@ public class PersonaServicioImpl implements PersonaServicio{
 	}
 
 	@Override
-	public Persona getEmpleado(Persona empleado) {
-		// TODO Auto-generated method stub
+	public Persona getEmpleado(Persona persona) {
+		personaRepository.getByPersona(persona);
 		return null;
 	}
 	
 	@Override
-	public List<Persona> getAllPersonas()
+	public List<Persona> consultarPersonas()
 	{
 		return (List<Persona>)personaRepository.findAll();
 	}
 	
+	public Boolean guardarPersona(Persona persona)
+	{
+		Persona p = personaRepository.save(persona);
+		return p!=null?true:false;
+	}
 
 }

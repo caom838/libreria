@@ -6,5 +6,5 @@ import com.ud.libreria.modelo.MedioPago;
 
 public interface MedioPagoServicio {
 
-	List<MedioPago> consultar();
+	List<MedioPago> consultarMediosPago();
 }

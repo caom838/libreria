@@ -3,12 +3,18 @@ package com.ud.libreria.modelo;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.MappedSuperclass;
+
+import lombok.Data;
+
+
 /**
  * @author shrek
  * @version 1.0
  * @created 28-may.-2019 10:39:40 p. m.
  */
-
+@Data
+@MappedSuperclass
 public abstract class Operacion {
 
 	private String comentarios;
@@ -18,13 +24,7 @@ public abstract class Operacion {
 	private Persona persona;
 	private Double valor;
 
-	public Operacion(){
 
-	}
-
-	public void finalize() throws Throwable {
-
-	}
 	public Double calcularTotal(){
 		return 0.0;
 	}

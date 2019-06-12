@@ -11,27 +11,27 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Configuration
-@EnableSwagger2
+//@Configuration
+//@EnableSwagger2
 public class SwaggerConfig {                                    
-    @Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .apiInfo(apiInfo())
-          .select()                                  
-          .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
-          .build();                                           
-    }
-    
 //    @Bean
-//    public Docket swagger() {
-//      return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
-//          .apis(RequestHandlerSelectors.basePackage("com.uid.libreria")).build();
+//    public Docket api() { 
+//        return new Docket(DocumentationType.SWAGGER_2)  
+//          .apiInfo(apiInfo())
+//          .select()                                  
+//          .apis(RequestHandlerSelectors.any())              
+//          .paths(PathSelectors.any())                          
+//          .build();                                           
 //    }
-
-    private ApiInfo apiInfo() {
-      return new ApiInfoBuilder().title("Libreria API").description("Libreria services API.")
-          .version("1.0").build();
-    }
+//    
+////    @Bean
+////    public Docket swagger() {
+////      return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
+////          .apis(RequestHandlerSelectors.basePackage("com.uid.libreria")).build();
+////    }
+//
+//    private ApiInfo apiInfo() {
+//      return new ApiInfoBuilder().title("Libreria API").description("Libreria services API.")
+//          .version("1.0").build();
+//    }
 }

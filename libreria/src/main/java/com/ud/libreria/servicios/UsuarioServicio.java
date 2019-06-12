@@ -15,4 +15,6 @@ public interface UsuarioServicio {
 	List<Rol> consultarRoles();
 	
 	List<Privilegio> consultarPrivilegios();
+	
+	List<Usuario> consultarUsuarios();
 }

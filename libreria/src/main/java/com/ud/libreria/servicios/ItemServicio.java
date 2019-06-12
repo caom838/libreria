@@ -6,6 +6,6 @@ import com.ud.libreria.modelo.Item;
 
 public interface ItemServicio {
 
-	List<Item> getAll();
+	List<Item> consultarItems();
 	
 }
